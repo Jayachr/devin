@@ -1,5 +1,7 @@
 # repo
 
+Hello to devin
+
 A sandbox repository used for practicing and experimenting with Git: creating and switching branches, rebasing, and resolving merge conflicts. The files here are artifacts of those experiments (largely performed through the Eclipse IDE) and carry no application logic.
 
 ## Repository Structure
