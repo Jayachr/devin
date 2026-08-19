@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>devin — Git sandbox</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1>Hello to devin</h1>
+      <p class="tagline">A sandbox repository for practicing Git workflows.</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>What this repo is for</h2>
+        <p>
+          Branching, rebasing, and resolving merge conflicts — rehearsed in a place where
+          nothing breaks. There is no application code here, only throwaway files.
+        </p>
+      </section>
+
+      <section>
+        <h2>Try it</h2>
+        <pre><code>git clone https://github.com/Jayachr/devin.git
+cd devin
+
+git checkout -b my-branch
+echo "some change" &gt;&gt; notes.txt
+git add notes.txt &amp;&amp; git commit -m "practice commit"
+
+git rebase main
+git checkout main &amp;&amp; git merge my-branch</code></pre>
+      </section>
+
+      <section>
+        <h2>Links</h2>
+        <ul>
+          <li><a href="https://github.com/Jayachr/devin">Repository on GitHub</a></li>
+          <li><a href="README.md">README</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>Feel free to reset, rewrite, or discard history — nothing here is production code.</p>
+    </footer>
+  </body>
+</html>
