@@ -289,3 +289,9 @@ footer {
   line-height: 1;
   cursor: pointer;
 }
+
+@media (max-width: 400px) {
+  section {
+    scroll-margin-top: 9.5rem;
+  }
+}
