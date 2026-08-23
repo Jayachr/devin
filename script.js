@@ -55,6 +55,11 @@ function highlightNav() {
   navLinks.forEach((_link, section) => {
     if (section.getBoundingClientRect().top <= line) current = section;
   });
+
+  const atBottom =
+    window.innerHeight + window.scrollY >= document.body.scrollHeight - 2;
+  if (atBottom) current = [...navLinks.keys()].pop();
+
   navLinks.forEach((link, section) => {
     link.classList.toggle("is-active", section === current);
   });
