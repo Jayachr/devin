@@ -20,6 +20,29 @@ document.querySelectorAll("#gallery img").forEach((img) => {
   img.addEventListener("click", () => openLightbox(img.src, img.alt));
 });
 
+const navLinks = new Map();
+document.querySelectorAll(".site-header nav a").forEach((link) => {
+  const section = document.querySelector(link.getAttribute("href"));
+  if (section) navLinks.set(section, link);
+});
+
+const header = document.querySelector(".site-header");
+
+function highlightNav() {
+  const line = header.getBoundingClientRect().height + 24;
+  let current = null;
+  navLinks.forEach((_link, section) => {
+    if (section.getBoundingClientRect().top <= line) current = section;
+  });
+  navLinks.forEach((link, section) => {
+    link.classList.toggle("is-active", section === current);
+  });
+}
+
+highlightNav();
+window.addEventListener("scroll", highlightNav, { passive: true });
+window.addEventListener("resize", highlightNav);
+
 lightbox.addEventListener("click", closeLightbox);
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && !lightbox.hidden) closeLightbox();
