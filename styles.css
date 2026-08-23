@@ -84,23 +84,25 @@ a {
   text-align: center;
 }
 
-.hero-logo {
-  width: 120px;
-  height: 120px;
-  margin: 0 auto 1rem;
+.hero-card {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto 1.5rem;
   border-radius: 16px;
-  object-fit: cover;
+  border: 1px solid var(--border);
 }
 
-.hero h1 {
-  margin: 0;
-  font-size: clamp(2rem, 6vw, 3rem);
-}
-
-.tagline {
-  color: var(--muted);
-  margin: 0.5rem 0 1.5rem;
-  font-style: italic;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .cta {
