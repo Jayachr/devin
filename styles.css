@@ -437,6 +437,26 @@ footer {
   margin-bottom: 1.25rem;
 }
 
+@media (min-width: 40rem) {
+  .contact-cards {
+    grid-template-columns: 1fr 1.2fr 1fr;
+  }
+
+  .contact-card[href^="tel:"] {
+    grid-column: 1;
+  }
+
+  .contact-card[href*="maps"] {
+    grid-column: 2;
+    grid-row: 1 / 3;
+  }
+
+  .contact-card[href*="instagram"] {
+    grid-column: 3;
+    grid-row: 1 / 3;
+  }
+}
+
 .contact-card {
   display: flex;
   flex-direction: column;
