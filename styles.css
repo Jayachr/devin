@@ -135,7 +135,11 @@ a {
 
 .video-band video::-webkit-media-controls-mute-button,
 .video-band video::-webkit-media-controls-volume-slider,
-.video-band video::-webkit-media-controls-volume-control-container {
+.video-band video::-webkit-media-controls-volume-control-container,
+.video-band video::-webkit-media-controls-timeline,
+.video-band video::-webkit-media-controls-timeline-container,
+.video-band video::-webkit-media-controls-current-time-display,
+.video-band video::-webkit-media-controls-time-remaining-display {
   display: none;
 }
 
