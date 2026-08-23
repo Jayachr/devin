@@ -478,10 +478,20 @@ footer {
 }
 
 .contact-label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--accent);
+}
+
+.contact-icon {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  fill: currentColor;
 }
 
 .contact-value {
