@@ -20,6 +20,27 @@ document.querySelectorAll("#gallery img").forEach((img) => {
   img.addEventListener("click", () => openLightbox(img.src, img.alt));
 });
 
+const video = document.getElementById("opening-video");
+const videoToggle = document.getElementById("video-toggle");
+
+function syncVideoToggle() {
+  const paused = video.paused;
+  videoToggle.querySelector("span").textContent = paused ? "▶" : "❚❚";
+  videoToggle.setAttribute("aria-label", paused ? "Play video" : "Pause video");
+  videoToggle.classList.toggle("is-paused", paused);
+}
+
+function toggleVideo() {
+  if (video.paused) video.play();
+  else video.pause();
+}
+
+videoToggle.addEventListener("click", toggleVideo);
+video.addEventListener("click", toggleVideo);
+video.addEventListener("play", syncVideoToggle);
+video.addEventListener("pause", syncVideoToggle);
+syncVideoToggle();
+
 const navLinks = new Map();
 document.querySelectorAll(".site-header nav a").forEach((link) => {
   const section = document.querySelector(link.getAttribute("href"));

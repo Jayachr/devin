@@ -166,14 +166,38 @@ a {
   background: #000;
 }
 
-.video-band video::-webkit-media-controls-mute-button,
-.video-band video::-webkit-media-controls-volume-slider,
-.video-band video::-webkit-media-controls-volume-control-container,
-.video-band video::-webkit-media-controls-timeline,
-.video-band video::-webkit-media-controls-timeline-container,
-.video-band video::-webkit-media-controls-current-time-display,
-.video-band video::-webkit-media-controls-time-remaining-display {
-  display: none;
+.video-shell {
+  position: relative;
+}
+
+.video-toggle {
+  position: absolute;
+  left: 0.9rem;
+  bottom: 0.9rem;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #0b0e14;
+  background: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+  line-height: 1;
+  opacity: 0;
+  transition: opacity 0.2s ease, background 0.2s ease;
+}
+
+.video-shell:hover .video-toggle,
+.video-toggle:focus-visible,
+.video-toggle.is-paused {
+  opacity: 1;
+}
+
+.video-toggle:hover {
+  background: #fff;
 }
 
 main {

@@ -48,17 +48,23 @@
     </section>
 
     <section class="video-band" aria-label="Opening video">
-      <video
-        src="media/opening.mp4"
-        poster="images/video-poster.jpg"
-        controls
-        controlslist="nodownload noremoteplayback"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="metadata"
-      ></video>
+      <div class="video-shell">
+        <video
+          id="opening-video"
+          src="media/opening.mp4"
+          poster="images/video-poster.jpg"
+          controlslist="nodownload noremoteplayback"
+          disablepictureinpicture
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+        ></video>
+        <button id="video-toggle" class="video-toggle" type="button" aria-label="Pause video">
+          <span aria-hidden="true">❚❚</span>
+        </button>
+      </div>
     </section>
 
     <main>
